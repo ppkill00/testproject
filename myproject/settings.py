@@ -25,7 +25,7 @@ SECRET_KEY = '78j2ghr!ue-&nr6$_*ep@0k=#g8x=i+p=d_fc*cpqx)%2$qy5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '*']
 
 
 # Application definition
@@ -82,6 +82,18 @@ DATABASES = {
     }
 }
 '''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydb',
+        'USER': 'wulf',
+        'PASSWORD': 'ajtmf3376',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
